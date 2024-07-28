@@ -3,7 +3,7 @@ const inputEle = document.querySelector(".input");
 const ListEle = document.querySelector(".list");
 /// getting th saved items list from local storage
 let list= JSON.parse(localStorage.getItem("list"));
-console.log(list);
+/// console.log(list);
 
 list.forEach(task=>{
     ToDoList(task);
