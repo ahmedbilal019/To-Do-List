@@ -11,7 +11,7 @@ body {
     top: 35%;
     box-shadow: 3px 5px 17px 5px rgba(0, 0, 0, 0.31);
     width: 400px;
-    background-color: rgb(235, 235, 107);
+    background-color: rgb(255, 251, 12);
     border-radius: 10px;
 }
 
@@ -19,15 +19,15 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding:20px;
-    font-size: 20px;
+    font-size: 18px;
     border-style: none;
     border-radius: 10px 10px 0 0;
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
 }
 
 
 .input::placeholder {
-    color: lightgray;
+    color: rgb(170, 165, 165);
 
 }
 
@@ -42,6 +42,7 @@ body {
     border-top-style: dotted;
     border-color: gray;
     position: relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .list li .fa-trash {
