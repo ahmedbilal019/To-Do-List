@@ -2,13 +2,8 @@ const formEle = document.querySelector(".form");
 const inputEle = document.querySelector(".input");
 const ListEle = document.querySelector(".list");
 /// getting th saved items list from local storage
-<<<<<<< HEAD
-let list = JSON.parse(localStorage.getItem("list"))|| [];
+let list = JSON.parse(localStorage.getItem("list"))||[];
 // console.log(list);
-=======
-let list= JSON.parse(localStorage.getItem("list"));
-/// console.log(list);
->>>>>>> d7dca037bdbc89736a6c0d93d390f48ddd455b44
 
 list.forEach(task => {
     ToDoList(task);
