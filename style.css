@@ -42,13 +42,14 @@ body {
     border-top-style: dotted;
     border-color: gray;
     position: relative;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-wrap: pretty;
 }
 
 .list li .fa-trash {
     color: red;
     position: absolute;
-    right: 6%;
+    right: 3%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -57,7 +58,7 @@ body {
 .list li .fa-pen-to-square {
     color: black;
     position: absolute;
-    right: 12%;
+    right: 7%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -66,7 +67,7 @@ body {
 .list li .fa-square-check {
     color: green;
     position: absolute;
-    right: 18%;
+    right: 12%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -77,4 +78,57 @@ body {
 }
 .list li.checked .fa-square-check{
     color: darkgrey;
+}
+
+/* For Mobile Screen  */
+
+@media (min-width: 320px) and (max-width: 375px) {
+    
+.form {
+   
+    position: absolute;
+    top: 35%;
+    box-shadow: 3px 5px 17px 5px rgba(0, 0, 0, 0.31);
+    width:fit-content;
+    background-color: rgb(255, 251, 12);
+    border-radius: 10px;
+}
+.list li {
+    list-style: none;
+    padding: 20px;
+    padding-right: 90px;
+    border-top-style: dotted;
+    border-color: gray;
+    position: relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-wrap: pretty;
+    word-break: break-all;
+}
+.list li .fa-trash {
+    color: red;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.list li .fa-pen-to-square {
+    color: black;
+    position: absolute;
+    right: 9%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.list li .fa-square-check {
+    color: green;
+    position: absolute;
+    right: 17%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 }
