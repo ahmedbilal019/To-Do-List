@@ -2,17 +2,19 @@ const formEle = document.querySelector(".form");
 const inputEle = document.querySelector(".input");
 const ListEle = document.querySelector(".list");
 /// getting th saved items list from local storage
-let list = JSON.parse(localStorage.getItem("list"))||[];
+let list = JSON.parse(localStorage.getItem("list")) || [];
 // console.log(list);
 
 list.forEach(task => {
     ToDoList(task);
 })
+
 formEle.addEventListener("submit", (event) => {
     event.preventDefault();
     ToDoList();
     UpdateLocalStorage();
 })
+
 function ToDoList(task) {
     let newTask = inputEle.value;
     if (task) {
@@ -22,9 +24,15 @@ function ToDoList(task) {
     if (task && task.checked) {
         liEle.classList.add("checked");
     }
-    liEle.innerHTML = newTask;
-    ListEle.appendChild(liEle);
-    inputEle.value = "";
+    if (newTask === "") {
+        alert("You did not enter any task.")
+    }
+    else {
+        liEle.innerHTML = newTask;
+        ListEle.appendChild(liEle);
+        inputEle.value = "";
+    }
+
 
     ////// Creating checked button
     const checkButtonEle = document.createElement("div");
